@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Particleground demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}" />
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- remember, jQuery is completely optional -->
+  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
+  <!-- <script type='text/javascript' src='../jquery.particleground.js'></script>
+  <script type='text/javascript' src='js/demo.js'></script> -->
+  <!-- <script type="text/javascript" src="{{ url_for('static',filename='script/jquery-1.11.1.min.js')}}"></script> -->
+  <script type="text/javascript" src="{{ url_for('static',filename='script/jquery.particleground.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static',filename='script/demo.js')}}"></script>
+</head>
+
+<body>
+
+  <div id="particles">
+    <div id="intro">
+
+      <h2>Enter Your IP address</h2>
+
+      <form action="{{url_for('index')}}" method="post">
+        <label>
+          <input type="text" name="search" placeholder="">
+          <button type="submit" value="Search">Search</button>
+        </label>
+      </form>
+      <br>
+      <br>
+      <br>
+      <div id="detail">
+        <p>IP Address is : <b> {{data.ip}} </b></p>
+        <p>City Location is : <b> {{data.city}} </b></p>
+        <p>IP Country is : <b>{{data.country}}</b></p>
+        <p>Available Language is : <b>{{data.languages}}</b></p>
+        <p>Latitude Information Is : <b>{{data.latitude}}</b></p>
+        <p>Longitude Information Is : <b>{{data.longitude}}</b></p>
+        <p>Time Zone Information Is : <b>{{data.timezone}}</b></p>
+        <p>Availble Calling Code : <b>{{data.country_calling_code}}</b></p>
+        <p>Available Currency Is : <b>{{data.currency}}</b></p>
+        <p>Internet Network Is : <b>{{data.org}}</b></p>
+        <p>Continent Code Is : <b>{{data.continent_code}}</b></p>
+        <p>Postal Code Is : <b>{{data.postal}}</b></p>
+        <p>UTC Offset Is : <b>{{data.utc_offset}}</b></p>
+      </div>
+
+
+    </div>
+  </div>
+  </p>
+  <div id="nav-bar">
+    <h2>Mohammad Arbaz .</h2>
+    <marquee behavior="scroll" direction="left">
+      Hey, I am Mohammad Arbaz an Engineering student. my motive is to provide all OSINT (open system investing tools)
+      at one place and this this web page is begining soon i will collect and provide you at one place
+    </marquee>
+
+  </div>
+
+</body>
+
+</html>
